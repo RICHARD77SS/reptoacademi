@@ -49,7 +49,9 @@
     </nav>
 
     <main class="home">
+      
       <h2 class="titulo__home">REPTO</h2>
+      <p>academi</p>
       <div class="slide">
         <div id="slider" class="slider">
           <img class="selected" src="imagens/652260.jpg" alt="alter">
@@ -62,8 +64,88 @@
     </main>
     <div class="conteiner__perfil">
       <div class="card__perfil a">
-        <h2>Calcule de IMC</h2>
+        <div class="perfil">
+          <h2 class="title perfil">Veja qual o seu perfil</h2>
+
+        </div>
+        <div class="main__card">
+          <h2 class="title imc">Calculo de IMC</h2>
+          <form class="form__container" action="" method="POST" id='formulario'>
+            <div class="form__group">
+              <label class="label" for="nome">Nome</label>
+              <input 
+                type="text" 
+                name="name" 
+                id="nome" 
+                class="input" 
+                autocomplete="on"
+                required />
+            </div>
+            <div class="form__group">
+              <label class="label" for="idade">Idade</label>
+              <input
+                type="number" 
+                min="0" 
+                max="130" 
+                name="idade" 
+                id="idade" 
+                class="input" 
+                autocomplete="on" 
+                required />
+            </div>
+            <div class="form__group">
+              <label class="label" for="peso">Peso</label>
+              <input 
+                type="number"
+                step="0.01"
+                min="0.0" 
+                max="500.0" 
+                name="peso" 
+                id="peso" 
+                class="input" 
+                placeholder="Ex: 65"
+                autocomplete="on"
+                required />
+            </div>
+            <div class="form__group">
+              <label class="label" for="altura">Altura</label>
+              <input 
+                type="number" 
+                step="0.01"
+                min="0.0" 
+                max="2.70" 
+                name="altura" 
+                id="altura" 
+                class="input" 
+                placeholder="Ex: 1.80"
+                autocomplete="on"
+                required />
+            </div>
+            <!-- BOTOES -->
+            <div class="form__group b">
+              <button type="button" class='buttons' id='btnEnviar'>
+                Enviar
+              </button>
+              <button type='reset' class='buttons' id='btnLimpar'>
+                Limpar
+              </button>
+            </div>
         
+            <div class="form__result">
+              <label class="label" for="imc">IMC</label>
+              <input placeholder="Resultado IMC" type="number" name="imc" id="resultadoImc" class="input" value='0.0' disabled />
+              <span id='aviso'></span>
+            </div>
+          </form>
+          <div class="result" id='resultado'>
+            <h2 class="label"  id='rid' class='pessoa'>IMC</h2>
+            <p class="label" id='rnome' class='pessoa'></p>
+            <p class="label" id='ridade' class='pessoa'></p>
+            <p class="label" id='rpeso' class='pessoa'></p>
+            <p class="label" id='raltura' class='pessoa'></p>
+            <p class="label" id='imc' class='pessoa'></p>
+          </div>
+        </div>
       </div>
       <div class="card__perfil b">
 
